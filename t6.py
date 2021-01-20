@@ -1,17 +1,14 @@
 def alg(i):
- s = i
- n = 2
- while s < 37:
-  s = s + 3
-  n = n * 2
- return n
+    s, k = 5, 0
+    d = i
+    while s < d:
+        k += 2
+        s += k
+    return s
 
-
-print(alg(18))
-print(alg(19))
-
+print(alg(138))
 for i in range(-1000, 1000):
- if alg(i) == 128:
-  print(i)
-  exit()
+    if alg(i) == 161:
+        print(i)
+        exit()
 

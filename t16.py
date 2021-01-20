@@ -1,10 +1,10 @@
 def f(n):
-    if n == 1:
+    if n == 0:
         return 1
-    elif n > 1 and n % 2:
-        return n + f(n - 2)
-    elif not n % 2:
-        return n * f(n - 1)
+    elif n > 0:
+        return 2*f(1 - n) + 3*f(n - 1) + 2
+    elif n < 0:
+        return -1 * f(-1 * n)
 
 
-print(f(40))
+print(f(23))

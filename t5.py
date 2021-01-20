@@ -15,6 +15,5 @@ def alg(n):
     return r
 
 
-
 for i in range(1, 10000):
     print(i, alg(i))

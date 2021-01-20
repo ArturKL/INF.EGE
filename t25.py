@@ -13,13 +13,11 @@ def divisors(num):
             if i != div:
                 divs.append(div)
     return divs
+print(divisors(27))
 
-
-a, b = 289123456, 389123456
-x, y = ceil(sqrt(a)), floor(sqrt(b))
-print(x, y)
+x, y = 135790, 163228
 for i in range(x, y + 1):
-    dvs = divisors(i**2)
-    # print(dvs)
-    if len(dvs) == 3:
-        print(i, dvs)
+    dvs = divisors(i)
+    s = sum(dvs)
+    if s > 460000:
+        print(len(dvs), s)

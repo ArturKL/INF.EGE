@@ -1,7 +1,7 @@
 a = [1]
-for i in range(2, 66):
+for i in range(2, 21):
     x = a[i - 2]
-    if (i % 3 == 0 and i < 20) or (i % 3 == 0 and i / 3 >= 20):
-        x += a[i // 3 - 1]
+    if (i % 2 == 0 and i <= 10) or (i % 2 == 0 and i / 2 >= 10):
+        x += a[i // 2 - 1]
     a.append(x)
-print(a[-1])
+print(a)

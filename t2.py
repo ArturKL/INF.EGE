@@ -1,8 +1,7 @@
-print('x y z w f')
+print('x y z f')
 for x in range(2):
     for y in range(2):
         for z in range(2):
-            for w in range(2):
-                f = (x == (not y)) <= ((x and w) == z)
+                f = (z or y) <= (x == z)
                 if not f:
-                    print(x, y, z, w, 0)
+                    print(x, y, z, 0)

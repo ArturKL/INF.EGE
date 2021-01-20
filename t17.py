@@ -1,10 +1,11 @@
-a = 3 * 10 ** 10
-b = 5 * 10 ** 10
-c = 0
-minn = None
-for i in range(a, b + 1, 100000):
-    if (not i % 11) and (not i % 100000) and i % 17 and i % 23 and i % 41 and i % 103:
-        c += 1
-        if minn is None:
+a, b = 3721, 7752
+ans = 0
+minn = 7752
+print(bin(3723))
+for i in range(a, b + 1):
+    n = sum(map(int, list(str(i))))
+    if n % 3 == 0 and n % 8:
+        if i < minn:
             minn = i
-print(c, minn)
+        ans += 1
+print(ans, minn)

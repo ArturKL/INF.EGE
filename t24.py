@@ -1,6 +1,11 @@
+from string import ascii_letters
 f = open('24.txt', 'r')
+ans = 0
 c = 0
-for line in f.readlines():
-    if line.count('E') < line.count('A'):
+for i in f.readline():
+    if i in ascii_letters:
         c += 1
-print(c)
+    elif c >= 5:
+        ans += 1 + (c - 5)
+        c = 0
+print(ans)
